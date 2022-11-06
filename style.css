@@ -17,13 +17,18 @@ body {
     color: white;
 }
 
-.contenedorImagen {
+.contenedorImagen{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-image: url(/img/imagen-principal.jpg);
+}
+
+.imagenPrincipal {
+    width: 100%;
+    height: 110vh;
+
 }
 
 .contenedorBuscador {
