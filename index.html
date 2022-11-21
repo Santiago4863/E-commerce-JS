@@ -1,123 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>E-commerce</title>
+    <title>VALKEEM</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
 
-    <header class="contenedorFlex">
-        <h2 class="logo">LOGO/NOMBRE</h2>
-        <h2 class="carrito">CARRITO</h2>
-    </header>
-
-    <main>
-
-        <div class="contenedorImagen">
-            <img class="imagenPrincipal" src="./img/imagen-principal.jpg" alt="imagen principal">
-        </div>
-
-        <section class="contenedorBuscador">
-            <input class="buscador" type="text" placeholder="Buscar producto"></input>
-            <button class="botonBuscador">Buscar</button>
-        </section>
-
-        <section class="fondo">
-
-            <section class="contenedorPadre">
-                <section class="contenedorFiltro">
-
-                    <ul class="filtroCategoria">Categorias:</ul>
-                    <li class="categoria">Anteojos de sol</li>
-                    <li class="categoria">Anteojos para niños</li>
-                    <li class="categoria">Anteojos para hombres</li>
-                    <li class="categoria">Anteojos para mujer</li>
-                    </ul>
-                    <ul class="rangoPrecio"></ul>
-
-                    </ul>
-
-                </section>
-                <section class="gridCards">
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de hombre</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Ray Ban Aviator para hombre. </p>
-                        <p class="precioProducto">Precio: $11.000</p>
-                        <button class="botonCard">Agregar al carrito</button>
-
-
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de mujer</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Ray Ban Julie para mujer. </p>
-                        <p class="precioProducto">Precio: $10.000</p>
-                        <button class="botonCard">Agregar al carrito</button>
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de mujer</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Vulk Harry para mujer. </p>
-                        <p class="precioProducto">Precio: $12.700</p>
-                        <button class="botonCard">Agregar al carrito</button>
-
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de niños</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Ray Ban Burbank kids para niños. </p>
-                        <p class="precioProducto">Precio: $9.000</p>
-                        <button class="botonCard">Agregar al carrito</button>
-
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de hombre</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Vulk The guardian para hombre. </p>
-                        <p class="precioProducto">Precio: $10.600</p>
-                        <button class="botonCard">Agregar al carrito</button>
-
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de niño</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Ray Ban Jounal kids para niños. </p>
-                        <p class="precioProducto">Precio: $11.200</p>
-                        <button class="botonCard">Agregar al carrito</button>
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de hombre</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Ray Ban the legend para hombre. </p>
-                        <p class="precioProducto">Precio: $9.500</p>
-                        <button class="botonCard">Agregar al carrito</button>
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de mujer</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Ray Ban Jackie ohh para mujer. </p>
-                        <p class="precioProducto">Precio: $13.100</p>
-                        <button class="botonCard">Agregar al carrito</button>
-                    </div>
-                    <div class="card">
-                        <h2 class="subtituloProducto">Anteojos de mujer</h2>
-                        <img class="imagenProducto" src="./img/imagen-de-prueba-320x240-1.jpg" alt="imagen de prueba">
-                        <p class="informacion">Ray Ban Trel para mujer. </p>
-                        <p class="precioProducto">Precio: $12.900</p>
-                        <button class="botonCard">Agregar al carrito</button>
-                    </div>
-                </section>
-            </section>
-        </section>
-    </main>
+    <div class="wrapper">
+        <aside>
+            <header class="encabezado">
+                <h1 class="logo">VALKEEM</h1>
+                <h2 class="subtitulo">Anteojos a los mejores precios</h2>
+            </header>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <button id="todos" class="boton-menu boton-categoria active"><i
+                                class="bi bi-hand-index-thumb"></i> Todos los productos</button>
+                    </li>
+                    <li>
+                        <button id="hombre" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>
+                            Hombre</button>
+                    </li>
+                    <li>
+                        <button id="mujer" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>
+                            Mujer</button>
+                    </li>
+                    <li>
+                        <button id="niño" class="boton-menu boton-categoria"><i class="bi bi-hand-index-thumb"></i>
+                            Niños</button>
+                    </li>
+                    <li>
+                        <a class="boton-menu boton-carrito" href="./carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito <span id="numerito" class="numerito">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <div class="contenedor">
+                <h2 class="titulo-principal" id="titulo-principal">Todos los productos</h2>
+            </div>
+            <div id="contenedor-productos" class="contenedor-productos">
+            </div>
+        </main>
+    </div>
     <footer></footer>
-    <script src="app.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
