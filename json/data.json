@@ -1,0 +1,182 @@
+[
+    {
+        "id": "hombre-01",
+        "titulo": "Ray-Ban",
+        "imagen": "./img/hombre/hombre-1.jpg",
+        "categoria": {
+            "nombre": "Hombres",
+            "id": "hombre"
+        },
+        "precio": 11000
+    },
+    {
+        "id": "hombre-02",
+        "titulo": "Ray-Ban",
+        "imagen": "./img/hombre/hombre-2.jpg",
+        "categoria": {
+            "nombre": "Hombres",
+            "id": "hombre"
+        },
+        "precio": 10000
+    },
+    {
+        "id": "hombre-03",
+        "titulo": "Ray-Ban",
+        "imagen": "./img/hombre/hombre-3.jpg",
+        "categoria": {
+            "nombre": "Hombres",
+            "id": "hombre"
+        },
+        "precio": 10500
+    },
+    {
+        "id": "hombre-04",
+        "titulo": "Bangue",
+        "imagen": "./img/hombre/hombre-4.jpg",
+        "categoria": {
+            "nombre": "Hombres",
+            "id": "hombre"
+        },
+        "precio": 11500
+    },
+    {
+        "id": "hombre-05",
+        "titulo": "Ray-Ban",
+        "imagen": "./img/hombre/hombre-5.jpg",
+        "categoria": {
+            "nombre": "Hombres",
+            "id": "hombre"
+        },
+        "precio": 9000
+    },
+    {
+        "id": "mujer-01",
+        "titulo": "Bangue",
+        "imagen": "./img/mujer/mujer-1.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 14000
+    },
+    {
+        "id": "mujer-02",
+        "titulo": "Bangue",
+        "imagen": "./img/mujer/mujer-2.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 12000
+    },
+    {
+        "id": "mujer-03",
+        "titulo": "Ray-Ban",
+        "imagen": "./img/mujer/mujer-3.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 13600
+    },
+    {
+        "id": "mujer-04",
+        "titulo": "Bangue",
+        "imagen": "./img/mujer/mujer-4.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 19000
+    },
+    {
+        "id": "mujer-05",
+        "titulo": "Bangue",
+        "imagen": "./img/mujer/mujer-5.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 10000
+    },
+    {
+        "id": "mujer-06",
+        "titulo": "Bangue",
+        "imagen": "./img/mujer/mujer-6.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 8000
+    },
+    {
+        "id": "mujer-07",
+        "titulo": "Ray-Ban",
+        "imagen": "./img/mujer/mujer-7.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 11000
+    },
+    {
+        "id": "mujer-08",
+        "titulo": "Bangue",
+        "imagen": "./img/mujer/mujer-8.jpg",
+        "categoria": {
+            "nombre": "Mujer",
+            "id": "mujer"
+        },
+        "precio": 13800
+    },
+    {
+        "id": "niño-01",
+        "titulo": "Rip Curl",
+        "imagen": "./img/niños/niños-1.jpg",
+        "categoria": {
+            "nombre": "Niños",
+            "id": "niño"
+        },
+        "precio": 7000
+    },
+    {
+        "id": "niño-02",
+        "titulo": "Rip Curl",
+        "imagen": "./img/niños/niños-2.jpg",
+        "categoria": {
+            "nombre": "Niños",
+            "id": "niño"
+        },
+        "precio": 8000
+    },
+    {
+        "id": "niño-03",
+        "titulo": "Bangue",
+        "imagen": "./img/niños/niños-3.jpg",
+        "categoria": {
+            "nombre": "Niños",
+            "id": "niño"
+        },
+        "precio": 6800
+    },
+    {
+        "id": "niño-04",
+        "titulo": "Bangue",
+        "imagen": "./img/niños/niños-4.jpg",
+        "categoria": {
+            "nombre": "Niños",
+            "id": "niño"
+        },
+        "precio": 8300
+    },
+    {
+        "id": "niño-05",
+        "titulo": "Rip Curl",
+        "imagen": "./img/niños/niños-estuche.jpg",
+        "categoria": {
+            "nombre": "Niños",
+            "id": "niño"
+        },
+        "precio": 2000
+    }
+]

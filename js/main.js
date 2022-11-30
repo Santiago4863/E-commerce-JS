@@ -1,279 +1,138 @@
-// PRODUCTOS
-const productos = [
-    // Hombre
-    {
-        id: "hombre-01",
-        titulo: "Hombre Ray-Ban",
-        imagen: "./img/hombre/hombre-1.jpg",
-        categoria: {
-            nombre: "Hombres",
-            id: "hombre"
-        },
-        precio: 11000
-    },
-    {
-        id: "hombre-02",
-        titulo: "Hombre Ray-Ban",
-        imagen: "./img/hombre/hombre-2.jpg",
-        categoria: {
-            nombre: "Hombres",
-            id: "hombre"
-        },
-        precio: 10000
-    },
-    {
-        id: "hombre-03",
-        titulo: "Hombre Ray-Ban",
-        imagen: "./img/hombre/hombre-3.jpg",
-        categoria: {
-            nombre: "Hombres",
-            id: "hombre"
-        },
-        precio: 10500
-    },
-    {
-        id: "hombre-04",
-        titulo: "Hombre Bangue",
-        imagen: "./img/hombre/hombre-4.jpg",
-        categoria: {
-            nombre: "Hombres",
-            id: "hombre"
-        },
-        precio: 11500
-    },
-    {
-        id: "hombre-05",
-        titulo: "Hombre Ray-Ban",
-        imagen: "./img/hombre/hombre-5.jpg",
-        categoria: {
-            nombre: "Hombres",
-            id: "hombre"
-        },
-        precio: 9000
-    },
-    // Mujer
-    {
-        id: "mujer-01",
-        titulo: "Mujer Bangue",
-        imagen: "./img/mujer/mujer-1.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 14000
-    },
-    {
-        id: "mujer-02",
-        titulo: "Mujer Bangue",
-        imagen: "./img/mujer/mujer-2.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 12000
-    },
-    {
-        id: "mujer-03",
-        titulo: "Mujer Ray-Ban",
-        imagen: "./img/mujer/mujer-3.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 13600
-    },
-    {
-        id: "mujer-04",
-        titulo: "Mujer Bangue",
-        imagen: "./img/mujer/mujer-4.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 19000
-    },
-    {
-        id: "mujer-05",
-        titulo: "Mujer Bangue",
-        imagen: "./img/mujer/mujer-5.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 10000
-    },
-    {
-        id: "mujer-06",
-        titulo: "Mujer Bangue",
-        imagen: "./img/mujer/mujer-6.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 8000
-    },
-    {
-        id: "mujer-07",
-        titulo: "Mujer Ray-Ban",
-        imagen: "./img/mujer/mujer-7.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 11000
-    },
-    {
-        id: "mujer-08",
-        titulo: "Mujer Bangue",
-        imagen: "./img/mujer/mujer-8.jpg",
-        categoria: {
-            nombre: "Mujer",
-            id: "mujer"
-        },
-        precio: 13800
-    },
-    // Niños
-    {
-        id: "niño-01",
-        titulo: "Niños Rip Curl",
-        imagen: "./img/niños/niños-1.jpg",
-        categoria: {
-            nombre: "Niños",
-            id: "niño"
-        },
-        precio: 7000
-    },
-    {
-        id: "niño-02",
-        titulo: "Niños Rip Curl",
-        imagen: "./img/niños/niños-2.jpg",
-        categoria: {
-            nombre: "Niños",
-            id: "niño"
-        },
-        precio: 8000
-    },
-    {
-        id: "niño-03",
-        titulo: "Niños Bangue",
-        imagen: "./img/niños/niños-3.jpg",
-        categoria: {
-            nombre: "Niños",
-            id: "niño"
-        },
-        precio: 6800
-    },
-    {
-        id: "niño-04",
-        titulo: "Niños Bangue",
-        imagen: "./img/niños/niños-4.jpg",
-        categoria: {
-            nombre: "Niños",
-            id: "niño"
-        },
-        precio: 8300
-    },
-    {
-        id: "niño-05",
-        titulo: "Niños Rip Curl",
-        imagen: "./img/niños/niños-estuche.jpg",
-        categoria: {
-            nombre: "Niños",
-            id: "niño"
-        },
-        precio: 2000
-    }
-];
+// Productos en data.json
+let productos = []
+
+//Declaracion de variables
+const contenedorProductos = document.querySelector("#contenedor-productos")
+const botonesCategorias = document.querySelectorAll(".boton-categoria")
+const tituloPrincipal = document.querySelector("#titulo-principal")
+let botonesAgregar = document.querySelectorAll(".producto-agregar")
+const numero = document.querySelector("#numero")
 
 
-const contenedorProductos = document.querySelector("#contenedor-productos");
-const botonesCategorias = document.querySelectorAll(".boton-categoria");
-const tituloPrincipal = document.querySelector("#titulo-principal");
-let botonesAgregar = document.querySelectorAll(".producto-agregar");
-const numerito = document.querySelector("#numerito");
 
+//Funciones
+
+//Carga de los productos
 
 function cargarProductos(productosElegidos) {
 
-    contenedorProductos.innerHTML = "";
+    contenedorProductos.innerHTML = ""
 
     productosElegidos.forEach(producto => {
 
-        const div = document.createElement("div");
-        div.classList.add("producto");
+        const div = document.createElement("div")
+        div.classList.add("producto")
         div.innerHTML = `
             <img class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="producto-detalles">
                 <h3 class="producto-titulo">${producto.titulo}</h3>
                 <p class="producto-precio">$${producto.precio}</p>
                 <button class="producto-agregar" id="${producto.id}">Agregar</button>
-            </div>
-        `;
+            </div>`
 
-        contenedorProductos.append(div);
+        contenedorProductos.append(div)
     })
 
-    actualizarBotonesAgregar();
+    actualizarBotonesAgregar()
 }
 
-cargarProductos(productos);
+//Botones filtro de los productos
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
-        botonesCategorias.forEach(boton => boton.classList.remove("active"));
-        e.currentTarget.classList.add("active");
+        botonesCategorias.forEach(boton => boton.classList.remove("active"))
+        e.currentTarget.classList.add("active")
 
         if (e.currentTarget.id != "todos") {
-            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id);
-            tituloPrincipal.innerText = productoCategoria.categoria.nombre;
-            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-            cargarProductos(productosBoton);
+            const productoCategoria = productos.find(producto => producto.categoria.id === e.currentTarget.id)
+            tituloPrincipal.innerText = productoCategoria.categoria.nombre
+            const productosBoton = productos.filter(producto => producto.categoria.id === e.currentTarget.id)
+            cargarProductos(productosBoton)
         } else {
-            tituloPrincipal.innerText = "Todos los productos";
-            cargarProductos(productos);
+            tituloPrincipal.innerText = "Todos los productos"
+            cargarProductos(productos)
         }
 
     })
-});
+})
+
+//Botones Agregar al carrito
 
 function actualizarBotonesAgregar() {
-    botonesAgregar = document.querySelectorAll(".producto-agregar");
+    botonesAgregar = document.querySelectorAll(".producto-agregar")
+
+    botonesAgregar.forEach(boton => {
+
+        boton.addEventListener("click", () => {
+
+            Toastify({
+                text: "Agregaste un producto al carrito",
+                duration: 3000,
+                destination: "./carrito.html",
+                newWindow: false,
+                close: true,
+                gravity: "bottom",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                    background: "#298880",
+                    border: "solid #e2e2e2",
+                },
+                onClick: function () { }
+            }).showToast()
+
+        })
+    })
 
     botonesAgregar.forEach(boton => {
         boton.addEventListener("click", agregarAlCarrito);
-    });
+    })
 }
 
-let productosEnCarrito;
+//Productos sumados al carrito 
 
-let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
+let productosEnCarrito
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito")
 
 if (productosEnCarritoLS) {
-    productosEnCarrito = JSON.parse(productosEnCarritoLS);
-    actualizarNumerito();
+    productosEnCarrito = JSON.parse(productosEnCarritoLS)
+    actualizarNumero()
 } else {
-    productosEnCarrito = [];
+    productosEnCarrito = []
 }
 
 function agregarAlCarrito(e) {
-    const idBoton = e.currentTarget.id;
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    const idBoton = e.currentTarget.id
+    const productoAgregado = productos.find(producto => producto.id == idBoton)
 
     if (productosEnCarrito.some(producto => producto.id === idBoton)) {
-        const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
-        productosEnCarrito[index].cantidad++;
+        const index = productosEnCarrito.findIndex(producto => producto.id == idBoton)
+        productosEnCarrito[index].cantidad++
     } else {
-        productoAgregado.cantidad = 1;
-        productosEnCarrito.push(productoAgregado);
+        productoAgregado.cantidad = 1
+        productosEnCarrito.push(productoAgregado)
     }
 
-    actualizarNumerito();
+    actualizarNumero()
 
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito))
 }
 
-function actualizarNumerito() {
-    let nuevoNumerito = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
-    numerito.innerText = nuevoNumerito;
+function actualizarNumero() {
+    let nuevoNumero = productosEnCarrito.reduce((acc, producto) => acc + producto.cantidad, 0)
+    numero.innerText = nuevoNumero
 }
+
+//Datos del JSON
+
+const traerLentes = async () => {
+    const response = await fetch("../json/data.json")
+    const data = await response.json()
+    productos = data
+    cargarProductos(productos)
+}
+
+traerLentes()
+

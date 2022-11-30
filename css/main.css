@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-
+/*Variables*/
 :root {
-    --clr-main: #298880;
-    --clr-main-light: #298880;
-    --clr-white: #ffffff;
-    --clr-gray: #e2e2e2;
-    --clr-red: #ff0000;
+    --colorAzul: #298880;
+    --colorBlanco: #ffffff;
+    --colorGris: #e2e2e2;
+    --colorRojo: #ff0000;
 }
+
+/*Estilos generales*/ 
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    background-color: var(--colorAzul);
 }
 
 h1,
@@ -38,39 +41,37 @@ ul {
 
 a {
     text-decoration: none;
+    margin-left: 30%;
 }
 
-.wrapper {
+/*Estilos index*/
+
+.posicion-pagina {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--clr-main);
-}
-
-
-
-.subtitulo {
-    font-size: 1rem;
-    text-align: center;
-    margin-right: 35px;
+    background-color: var(--colorAzul);
 }
 
 .encabezado {
     margin-top: 15px;
     display: flex;
     justify-content: center;
-    gap: 70%;
+    gap: 30%;
     align-items: center;
 
 }
 
-.nav-bar {
+.encabezado2{
+    margin-top: 15px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
+    gap: 20%;
+    align-items: center;
 }
 
-.contenedorLogo {
+.contenedor-logo {
     display: flex;
     justify-content: start;
 }
@@ -79,10 +80,14 @@ a {
     font-weight: 400;
     font-size: 1.8rem;
     margin-top: 10px;
-    margin-left: 34px;
     margin-bottom: 10px;
-    margin-right: 30px;
-    color: var(--clr-white);
+    margin-right: 50px;
+    color: var(--colorBlanco);
+}
+
+.filtro {
+    display: flex;
+    justify-content: end;
 }
 
 .menu {
@@ -90,72 +95,60 @@ a {
     gap: .5rem;
     margin-bottom: 15px;
     justify-content: end;
+    margin-right: 25px;
+}
+
+.menu-volver{
+    margin-bottom: 10px;
 }
 
 .boton-menu {
     background-color: transparent;
     border: 0;
-    color: var(--clr-white);
+    color: var(--colorBlanco);
+    width: 90%;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-weight: 600;
     padding: 8px;
     padding-left: 15px;
     padding-right: 20px;
     font-size: .85rem;
-    width: 90%;
     margin-top: 15px;
 }
 
 .boton-menu.active {
-    background-color: var(--clr-white);
-    color: var(--clr-main);
+    background-color: var(--colorBlanco);
+    color: var(--colorAzul);
     border-radius: 1rem;
     position: relative;
 }
 
-.boton-menu.active::before {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    bottom: 100%;
-    right: 0;
-    background-color: transparent;
-
+.subtitulo {
+    font-size: 1rem;
+    text-align: center;
+    margin-right: 35px;
 }
 
-.boton-menu.active::after {
-    content: '';
-    position: absolute;
-    width: 1rem;
-    height: 2rem;
-    top: 100%;
-    right: 0;
-    background-color: transparent;
-
-}
-
-
-.numerito {
-    background-color: var(--clr-white);
-    color: var(--clr-main);
-    padding: .15rem .25rem;
+.numero {
+    background-color: var(--colorBlanco);
+    color: var(--colorAzul);
+    padding: .10rem .20rem;
     border-radius: .25rem;
 }
 
-.boton-carrito.active .numerito {
-    background-color: var(--clr-main);
-    color: var(--clr-white);
+.boton-carrito.active .numero {
+    background-color: var(--colorAzul);
+    color: var(--colorBlanco);
+
 }
 
 main {
-    background-color: var(--clr-white);
-    margin: 1rem;
-    margin-left: 0;
+    background-color: var(--colorBlanco);
     padding: 3rem;
     width: 90%;
+    margin-bottom: 4rem;
 }
 
 .contenedor {
@@ -165,26 +158,28 @@ main {
 }
 
 .titulo-principal {
-    color: var(--clr-main);
+    color: var(--colorAzul);
     font-size: 2rem;
     margin-bottom: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 5%;
 }
 
+/*Estilos de lo agregado en JavaScript*/
 .contenedor-productos {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
+
 .producto-imagen {
     max-width: 100%;
-    border: solid var(--clr-main-light);
+    border: solid var(--colorAzul);
 }
 
 .producto-detalles {
-    background-color: var(--clr-main);
-    color: var(--clr-white);
+    background-color: var(--colorAzul);
+    color: var(--colorBlanco);
     padding: .5rem;
     margin-top: -2rem;
     position: relative;
@@ -202,38 +197,54 @@ main {
 
 .producto-agregar {
     border: 0;
-    background-color: var(--clr-white);
-    color: var(--clr-main);
+    background-color: var(--colorBlanco);
+    color: var(--colorAzul);
     padding: .4rem;
     text-transform: uppercase;
     border-radius: 2rem;
     cursor: pointer;
-    border: 2px solid var(--clr-white);
+    border: 2px solid var(--colorBlanco);
     transition: background-color .2s, color .2s;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-bottom: 7px;
 }
 
 .producto-agregar:hover {
-    background-color: var(--clr-main);
-    color: var(--clr-white);
+    background-color: var(--colorAzul);
+    color: var(--colorBlanco);
 }
 
+/* Carrito */
 
-/** CARRITO **/
-
-.wrapper2 {
+.posicion-pagina-carrito {
     display: flex;
     align-items: center;
     justify-content: start;
     flex-direction: column;
-    background-color: var(--clr-main);
+    background-color: var(--colorAzul);
     height: 100vh;
+    width: 100%;
+}
+
+.sumar{
+    cursor: pointer;
+    color: var(--colorBlanco);
+    background-color: var(--colorAzul);
+    padding: .10rem .20rem;
+    border-radius: .25rem;
+}
+
+.restar{
+    cursor: pointer;
+    color: var(--colorBlanco);
+    background-color: var(--colorAzul);
+    padding: .10rem .20rem;
+    border-radius: .25rem;
 }
 
 .titulo-carrito {
-    color: var(--clr-main);
+    color: var(--colorAzul);
     font-size: 2rem;
     margin-bottom: 2rem;
     margin-bottom: 40px;
@@ -247,7 +258,7 @@ main {
 
 .carrito-vacio,
 .carrito-comprado {
-    color: var(--clr-main);
+    color: var(--colorAzul);
 }
 
 .carrito-productos {
@@ -260,16 +271,15 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--clr-gray);
-    color: var(--clr-main);
+    background-color: var(--colorGris);
+    color: var(--colorAzul);
     padding: .5rem;
     padding-right: 1.5rem;
-    border-radius: 1rem;
+
 }
 
 .carrito-producto-imagen {
     width: 4rem;
-    border-radius: 1rem;
 }
 
 .carrito-producto small {
@@ -279,7 +289,7 @@ main {
 .carrito-producto-eliminar {
     border: 0;
     background-color: transparent;
-    color: var(--clr-red);
+    color: var(--colorRojo);
     cursor: pointer;
 }
 
@@ -290,10 +300,10 @@ main {
 
 .carrito-acciones-vaciar {
     border: 0;
-    background-color: var(--clr-gray);
+    background-color: var(--colorGris);
     padding: 1rem;
     border-radius: 1rem;
-    color: var(--clr-main);
+    color: var(--colorAzul);
     text-transform: uppercase;
     cursor: pointer;
 }
@@ -304,9 +314,9 @@ main {
 
 .carrito-acciones-total {
     display: flex;
-    background-color: var(--clr-gray);
+    background-color: var(--colorGris);
     padding: 1rem;
-    color: var(--clr-main);
+    color: var(--colorAzul);
     text-transform: uppercase;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -315,9 +325,9 @@ main {
 
 .carrito-acciones-comprar {
     border: 0;
-    background-color: var(--clr-main);
+    background-color: var(--colorAzul);
     padding: 1rem;
-    color: var(--clr-white);
+    color: var(--colorBlanco);
     text-transform: uppercase;
     cursor: pointer;
     border-top-right-radius: 1rem;
@@ -326,4 +336,149 @@ main {
 
 .disabled {
     display: none;
+}
+
+/*Estilos celular*/
+
+@media screen and (max-width: 480px){
+
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+    }
+    
+    
+    .posicion-pagina{
+        display: flex;
+    }
+    
+    .logo{
+        margin-left: 3%;
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    .contenedor-productos{
+        display: grid ;
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-principal{
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    main{
+        margin: 0;
+        padding: 1rem;
+        width: 100%;
+
+    }
+
+    a {
+        margin-left: 0;
+    }
+
+
+    /*Carrito*/
+
+    .encabezado2{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .carrito-producto-titulo,.carrito-producto-cantidad,.carrito-producto-precio,.carrito-producto-subtotal{
+        font-size: .70rem;
+    }
+
+    .carrito-acciones-vaciar,.carrito-acciones-comprar{
+        font-size: .80rem;
+    }
+
+    .totalPrecio,#total{
+        margin-top: 5px;
+        font-size: .85rem;
+    }
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1020px){
+
+    .logo{
+        margin: 0;
+    }
+
+    .menu{
+        margin-right: 0;
+        gap: 0;
+    }
+
+    main{
+        padding: 1.5rem;
+        width: 95%;
+        margin: 0;
+        margin-bottom: 1.3rem;
+    }
+
+    .encabezado{
+        gap: 15%;
+    }
+
+    .menu-volver{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px){
+
+    .contenedor-productos{
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr);
+        gap: .50rem;
+    }
+
+    .logo{
+        margin-left: 10%;
+    }
+
+    .menu-volver{
+        margin-bottom: 10px;
+    }
+
+    .encabezado2{
+        gap: 0;
+    }
+
+    .menu{
+        gap: 0;
+        margin-left: 0;
+    }
+
+    main{
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+    }
+
+    .titulo-principal{
+        font-size: 1.6rem;
+    }
+
+    .encabezado{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+        align-items: center;
+    }
 }
