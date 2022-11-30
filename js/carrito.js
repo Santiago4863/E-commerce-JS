@@ -44,15 +44,15 @@ function cargarProductosCarrito() {
             //Suma y resta de cantidad de productos en el carrito
 
             let restar = div.querySelector(".restar")
-            restar.addEventListener("click", () =>{
-            if(producto.cantidad !== 1){
+            restar.addEventListener("click", () => {
+                if (producto.cantidad !== 1) {
                     producto.cantidad--
                 }
                 cargarProductosCarrito()
             })
 
             let sumar = div.querySelector(".sumar")
-            sumar.addEventListener("click", () =>{
+            sumar.addEventListener("click", () => {
                 producto.cantidad++
                 cargarProductosCarrito()
             })
