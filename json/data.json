@@ -12,7 +12,7 @@
     {
         "id": "hombre-02",
         "titulo": "Ray-Ban",
-        "imagen": "./img/hombre/hombre-2.jpg",
+        "imagen": "../img/hombre/hombre-2.jpg",
         "categoria": {
             "nombre": "Hombres",
             "id": "hombre"
@@ -22,7 +22,7 @@
     {
         "id": "hombre-03",
         "titulo": "Ray-Ban",
-        "imagen": "./img/hombre/hombre-3.jpg",
+        "imagen": "../img/hombre/hombre-3.jpg",
         "categoria": {
             "nombre": "Hombres",
             "id": "hombre"
