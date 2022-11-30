@@ -128,10 +128,10 @@ function actualizarNumero() {
 //Datos del JSON
 
 const traerLentes = async () => {
-    const response = await fetch("../json/data.json")
+    const response = await fetch("./json/data.json")
     const data = await response.json()
     productos = data
-    cargarProductos()
+    cargarProductos(productos)
 }
 
 traerLentes()
